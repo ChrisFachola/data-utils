@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "data-utils"
+version = "0.1.0"
+description = "Utilities for data processing and ETL operations"
+authors = ["Christian Fachola <chris.github97@gmail.com>"]
+readme = "README.md"
+packages = [{include = "data_utils", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.0"
+google-cloud-bigquery = "^3.0.0"
+python-dotenv = "^1.0.0"
+psutil = "^5.9.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+pre-commit = "^3.6.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
