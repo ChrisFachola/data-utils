@@ -84,3 +84,4 @@ credentials.json
 !tests/data/*.csv  # Keep test data CSV files
 GSA_credentials.json
 notebooks/memory_utils_example.ipynb
+
